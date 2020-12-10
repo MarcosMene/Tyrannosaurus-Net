@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+:root {
+    --botaofundo: #cc8120;
+   --letras:#000;
+    --botaoletras:rgb(199, 238, 194);
+    --fundo:#fff;
+    --fundodisplay: #478352;
+    --white:#fff;
+    --bodycor: #F3F2EF;
+  }
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin:auto;
+    background-color:var(--bodycor);
+    color:#F3F2EF;
+    font-family: 'Titillium Web', sans-serif;
+    
+}
+
+
+.center {
+    position: relative;
+    top: 50%;
+     -ms-transform: translateY(-50%);
+     transform: translateY(-50%);
+ }
+ 
+ #abertura {
+     width: 400px;
+     height: 300px;
+     margin: auto;
+     border-radius:15px;
+     padding: 20px 30px;
+     text-align: center;
+     min-width: 300px;
+   background-color: var(--fundodisplay);
+   color:#478352;
+     
+ }
+
+ h1 {
+     font-weight: bold;
+     font-size: 2rem;
+     font-family: 'Piedra', cursive;
+ }
+
+h1,h2,h3,h4, p, label {
+    color:var(--botaoletras);
+    color:rgb(199, 238, 194);
+}
+
+
+
+ .nivelform input {
+     text-align:left;
+ }
+
+ .botoes {
+     text-align: left;
+     padding-left:40%;
+ }
+
+ #mensagemerro {
+    text-align: center;
+    
+  
+ }
+
+ #mensagemerro h4 {
+    color:var(--white) !important;
+    color:#fff;
+    padding:10px 0;
+ }
+
+button {
+    margin-top:15px;
+    padding:5px;
+    border-radius:5px;
+    border:none;
+    outline: none;
+    background-color:var(--botaofundo);
+    background-color: #cc8120;
+    color:var(--white);
+    font-weight: bold;
+}
+
+button:hover {
+    color:var(--botaofundo);
+    color: #cc8120;
+    background-color:var(--white);
+    background-color:#fff;
+}
+
+.dino {
+    width: 60px;
+    height: 60px;
+    background-image:url(images/dino.png);
+    position: absolute;
+    bottom: 0;
+    left:100px;
+}
+
+.cactus {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    background-image:url(images/cactus1.png);
+}
+
+.game-over {
+    margin:0;
+    padding:0;
+    text-align:center;
+    color:var(--fundodisplay);
+    color:#478352;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family:arial;
+}
+
+@keyframes slideright {
+    from {
+        background-position:70000%;
+    }
+    to {
+        background-position: 0;
+    } 
+}
+
+.background {
+    position:absolute;
+    bottom:0;
+    background-image: url(images/background.png);
+    background-repeat: repeat-x;
+    animation: slideright 6000s infinite linear;
+    width: 100%;
+    height: 200px;
+}
+#contador{
+   position:absolute;
+    width: 200px;
+    height: 30px;
+   background-color: var(--botaofundo);
+   background-color:  #cc8120;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+  
+    
+}
+
+
+.contagem{
+    padding-left:10px;
+    text-align: center;
+    font-weight: bold;
+    color:var(--white);
+    color:#fff;
+}
+
+.finaldojogo {
+    position:absolute;
+    width: 300px;
+    height: 300px;
+    background-color: var(--fundodisplay);
+    color:#478352;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+    text-align:center;
+    padding: 50px 0;
+}
+
+.finaldojogo h1 {
+    margin-bottom:20px;
+}
+
+
+

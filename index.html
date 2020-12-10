@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dio Dino Game</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+        
+      
+    </head>
+    <body>
+
+        <div class="center">
+            <div id="abertura">
+                <div class="container">
+                    <form id="nivelform">
+                        <h1>Tyrannosaurus Net</h1>
+                        <h2>Escolha um nível</h2>
+                        <div class="botoes">
+                           <input type="radio" id="básico" name=nivel value="basico" required>
+                        <label for="basico">Básico</label><br>
+                        <input type="radio" id="medio" name=nivel value="medio" required >
+                        <label for="medio">Médio</label><br>
+                        <input type="radio" id="dificil" name=nivel value="dificil" required >
+                        <label for="dificil">Difícil</label><br>
+                        <input type="radio" id="ninja" name=nivel value="ninja" required >
+                        <label for="ninja">Ninja</label><br>
+                        
+                        </div>
+                        <div id="mensagemerro" style="display:none;">
+                            <h4>Você deve escolher um nível</h4>
+                        </div>  
+                        
+                       
+                      </form> 
+                      <button id="botao" onclick="validateForm()">Começar</button>
+                      <button id="botaoreset" onclick="validateForm()" style="display: none;">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" >
+            <div id="contador"style="display: none;">
+                <p class="contagem">Total de pontos: <span id="contagem" class="contagem"> 0</span></p>
+            </div>
+        </div>
+        <div class="container" >
+         
+                <div class="finaldojogo" id="finaldojogo" style="display: none;">
+                    <h1>Fim do jogo</h1>
+                    <div class=botoesfinais>
+                        <button id="joganovamente" onclick="refreshgame()">Jogar novamente</button><br>
+                        <button id="sair" onclick="bye()" >Sair</button>
+                    </div>
+                    
+                </div>
+
+        </div>
+
+        <div class="background">
+            <div class="dino"></div>
+        </div>
+
+
+        <!-- sons -->
+        <audio src="sounds/gameover.mp3" preload="auto" id="gameoversom"></audio>
+        <audio src="sounds/jump.mp3" preload="auto" id="jumpsom"></audio>
+
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script> 
+        <script type="text/javascript" src="js/jquery-collision.min.js"></script>  
+        
+
+    </body>
+
+</html>
